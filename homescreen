@@ -1,0 +1,54 @@
+import 'package:flutter/material.dart';
+class homescreen_App extends
+StatelessWidget {
+  const homescreen_App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    Size size =MediaQuery.of(context).size;
+    return Scaffold(
+      backgroundColor: Colors.indigo,
+      body: SafeArea(
+        child: Column(
+          children: [
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Login App',style: TextStyle(fontSize: 30,
+                color: Colors.white),),
+                CircleAvatar(
+                  backgroundColor: Colors.indigo,
+                  radius: 60,
+                  child: Icon(Icons.logout_sharp,color: Colors.white,),
+                )
+              ],
+            ),
+          ),
+            SizedBox(
+              height: 150,
+            ),
+           Row(
+             mainAxisAlignment: MainAxisAlignment.center,
+             children: [
+               Text('Welcome',style: TextStyle(fontSize: 25,
+               color: Colors.black),),
+
+             ],
+           ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Flutter',style: TextStyle(fontSize: 50,
+                    color: Colors.black),),
+
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+
+}
